@@ -1,0 +1,11 @@
+{
+  "title": "AIOps - Predictive Infrastructure Anomaly Detection",
+  "schemaVersion": 39,
+  "panels": [
+    {"type":"stat","title":"CPU %","targets":[{"expr":"100 - (avg(rate(node_cpu_seconds_total{mode=\"idle\"}[5m])) * 100)"}]},
+    {"type":"stat","title":"Memory %","targets":[{"expr":"100 * (1 - node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)"}]},
+    {"type":"timeseries","title":"Node Health","targets":[{"expr":"up"}]},
+    {"type":"timeseries","title":"Anomaly Probability","targets":[]},
+    {"type":"table","title":"Recent Anomalies","targets":[]}
+  ]
+}

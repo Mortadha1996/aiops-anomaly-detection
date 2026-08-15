@@ -1,0 +1,19 @@
+prometheus:
+  url: "http://localhost:9090"
+  timeout: 15
+
+loki:
+  url: "http://localhost:3100"
+  timeout: 15
+
+postgres:
+  dsn: "postgresql://aiops:aiops@localhost:5432/aiops"
+
+mlflow:
+  tracking_uri: "http://localhost:5000"
+  experiment: "aiops-anomaly-detection"
+
+pipeline:
+  window_minutes: 5
+  random_state: 42
+  retention_hours: 12

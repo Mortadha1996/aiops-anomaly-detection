@@ -1,0 +1,1 @@
+*/15 * * * * aiops cd /opt/aiops-anomaly-detection && /opt/aiops/.venv/bin/python etl/infra_etl.py >> /var/log/aiops-etl.log 2>&1

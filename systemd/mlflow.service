@@ -1,0 +1,12 @@
+[Unit]
+Description=MLflow Tracking Server
+After=network.target
+
+[Service]
+User=aiops
+WorkingDirectory=/opt/aiops-anomaly-detection
+ExecStart=/opt/aiops/.venv/bin/mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:///mlflow.db --default-artifact-root /opt/aiops-anomaly-detection/mlruns
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

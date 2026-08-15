@@ -1,0 +1,1 @@
+0 * * * * aiops cd /opt/aiops-anomaly-detection && /opt/aiops/.venv/bin/python ml/infra_ml.py >> /var/log/aiops-ml.log 2>&1
